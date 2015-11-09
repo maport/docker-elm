@@ -1,11 +1,11 @@
-# [Elm](http://elm-lang.org/) in a container
+## [Elm](http://elm-lang.org/) in a container
 
-## Quick start
+### Quick start
 
 Add an `elm` alias (you probably want to add this to your `.bashrc` or similar): 
 
 ```sh
-alias elm='docker run -it --rm -v "$(pwd):/code" -w "/code" -e "HOME=/tmp" -u $UID:$GID -p 8000:8000 codesimple/elm:0.15'
+alias elm='docker run -it --rm -v "$(pwd):/code" -w "/code" -e "HOME=/tmp" -u $UID:$GID -p 8000:8000 codesimple/elm:0.15.1'
 ```
 
 Then use the alias to run the elm tools (version 0.15.1) from the container as you would normally:
@@ -17,7 +17,7 @@ elm reactor
 elm repl
 ```
 
-## Further information
+### Further information
 
 The elm tools in the image are built from source following the instructions at
 https://github.com/elm-lang/elm-platform.
