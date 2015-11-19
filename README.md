@@ -3,10 +3,10 @@
 Add an `elm` alias (you probably want to add this to your `.bashrc` or similar): 
 
 ```sh
-alias elm='docker run -it --rm -v "$(pwd):/code" -w "/code" -e "HOME=/tmp" -u $UID:$GID -p 8000:8000 codesimple/elm:0.15.1'
+alias elm='docker run -it --rm -v "$(pwd):/code" -w "/code" -e "HOME=/tmp" -u $UID:$GID -p 8000:8000 codesimple/elm:0.16'
 ```
 
-Then use the alias to run the elm tools (version 0.15.1) from the container as you would normally:
+Then use the alias to run the elm tools (version 0.16) from the container as you would normally:
 
 ```sh
 elm make
@@ -37,3 +37,12 @@ elm-make: elm-stuff/packages/evancz/virtual-dom/2.1.0/src/VirtualDom.elm: hGetCo
 elm-make: thread blocked indefinitely in an MVar operation
 ```
 This can generally be avoided by running `elm make` on the project before you run `elm reactor` (or after to fix it).
+
+
+### Elm versions
+
+To use a different version of the Elm tools just change the version number in the command above (after `codesimple/elm:`).
+The following versions are currently supported:
+
+ * 0.15.1
+ * 0.16
