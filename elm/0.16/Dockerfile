@@ -13,4 +13,6 @@ WORKDIR /opt
 RUN curl https://raw.githubusercontent.com/elm-lang/elm-platform/master/installers/BuildFromSource.hs > BuildFromSource.hs
 RUN runhaskell BuildFromSource.hs $ELM_VER
 
+ENV LC_ALL C.UTF-8
+
 ENTRYPOINT ["elm"]
