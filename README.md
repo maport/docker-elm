@@ -3,10 +3,10 @@
 Add an `elm` alias (you probably want to add this to your `.bashrc` or similar): 
 
 ```sh
-alias elm='docker run -it --rm -v "$(pwd):/code" -w "/code" -e "HOME=/tmp" -u $UID:$GID -p 8000:8000 codesimple/elm:0.16'
+alias elm='docker run -it --rm -v "$(pwd):/code" -w "/code" -e "HOME=/tmp" -u $UID:$GID -p 8000:8000 codesimple/elm:0.17'
 ```
 
-Then use the alias to run the elm tools (version 0.16) from the container as you would normally:
+Then use the alias to run the elm tools (version 0.17) from the container as you would normally:
 
 ```sh
 elm make
@@ -46,3 +46,9 @@ The following versions are currently supported:
 
  * 0.15.1
  * 0.16
+ * 0.17
+
+
+### Issues
+
+ * The `elm repl` for Elm 0.17 seems to be missing the coloured output that was present in Elm 0.16 (although error messages from `elm make` do appear in colour). I'm not sure if this is an issue with the build or with the Elm source.
