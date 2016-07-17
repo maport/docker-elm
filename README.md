@@ -52,3 +52,5 @@ The following versions are currently supported:
 ### Issues
 
  * The `elm repl` for Elm 0.17 seems to be missing the coloured output that was present in Elm 0.16 (although error messages from `elm make` do appear in colour). I'm not sure if this is an issue with the build or with the Elm source.
+ * If you experience permissions errors and are running OS X and/or docker machine, see issue #2.  
+ 
