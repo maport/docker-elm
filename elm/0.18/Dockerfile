@@ -1,4 +1,5 @@
-FROM haskell:7.10.2
+FROM haskell:7.10.3
+
 MAINTAINER Michael Porter <mike@codesimple.net>
 
 ENV ELM_VER=0.18
