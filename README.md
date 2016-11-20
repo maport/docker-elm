@@ -47,7 +47,7 @@ The following versions are currently supported:
  * 0.15.1
  * 0.16
  * 0.17
-
+ * 0.18
 
 ### Issues
 
