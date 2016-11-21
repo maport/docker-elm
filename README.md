@@ -3,10 +3,10 @@
 Add an `elm` alias (you probably want to add this to your `.bashrc` or similar): 
 
 ```sh
-alias elm='docker run -it --rm -v "$(pwd):/code" -w "/code" -e "HOME=/tmp" -u $UID:$GID -p 8000:8000 codesimple/elm:0.17'
+alias elm='docker run -it --rm -v "$(pwd):/code" -w "/code" -e "HOME=/tmp" -u $UID:$GID -p 8000:8000 codesimple/elm:0.18'
 ```
 
-Then use the alias to run the elm tools (version 0.17) from the container as you would normally:
+Then use the alias to run the elm tools from the container as you would normally:
 
 ```sh
 elm make
