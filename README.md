@@ -11,9 +11,11 @@ Then use the alias to run the elm tools from the container as you would normally
 ```sh
 elm make
 elm package
-elm reactor
+elm reactor -a 0.0.0.0
 elm repl
 ```
+
+*(You will usually need use the `-a 0.0.0.0` option when running elm reactor so that you can access it from outside of the container).*
 
 ### Further information
 
