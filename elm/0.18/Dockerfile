@@ -1,21 +1,8 @@
-FROM haskell:7.10.3
+FROM node:7.2.0
 
 MAINTAINER Michael Porter <mike@codesimple.net>
 
-ENV ELM_VER=0.18
-
-RUN apt-get update && apt-get install -y \
-   curl \
-   git \
-   libtinfo-dev \
-   nodejs
-
-ENV PATH /opt/Elm-Platform/$ELM_VER/.cabal-sandbox/bin:$PATH
-
-WORKDIR /opt
-
-RUN curl https://raw.githubusercontent.com/elm-lang/elm-platform/11c8ecb81a58b82a25c90145418cd70fa61d1679/installers/BuildFromSource.hs > BuildFromSource.hs
-
-RUN runhaskell BuildFromSource.hs $ELM_VER
+RUN npm install -g elm@0.18.0
+RUN npm install -g elm-test@0.18.0
 
 ENTRYPOINT ["elm"]
