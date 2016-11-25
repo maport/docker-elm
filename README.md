@@ -6,21 +6,21 @@ Add an `elm` alias (you probably want to add this to your `.bashrc` or similar):
 alias elm='docker run -it --rm -v "$(pwd):/code" -w "/code" -e "HOME=/tmp" -u $UID:$GID -p 8000:8000 codesimple/elm:0.18'
 ```
 
-Then use the alias to run the elm tools from the container as you would normally:
+Then use the alias to run the elm tools (and elm test) from the container as you would normally:
 
 ```sh
 elm make
 elm package
 elm reactor -a 0.0.0.0
 elm repl
+elm test
 ```
 
 *(You will usually need to use the `-a 0.0.0.0` option when running `elm reactor` so that you can access it from outside of the container).*
 
 ### Further information
 
-The elm tools in the image are built from source following the instructions at
-https://github.com/elm-lang/elm-platform.
+`elm test` is only included in versions 0.18 onwards.
 
 The current directory is mounted into the container so that the elm tools can locate your project files
 and write out `elm.js` and the `elm-stuff` directory. 
