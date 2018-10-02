@@ -50,6 +50,7 @@ The following versions are currently supported:
  * 0.16
  * 0.17
  * 0.18
+ * 0.19
 
 ### Issues
 
