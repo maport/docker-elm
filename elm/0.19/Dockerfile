@@ -1,4 +1,4 @@
-FROM node:7.2.0
+FROM node:10.16.0-stretch-slim
 
 MAINTAINER Michael Porter <mike@codesimple.net>
 
