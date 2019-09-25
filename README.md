@@ -19,8 +19,6 @@ elm repl
 
 ### Further information
 
-`elm test` is only included in versions 0.18 onwards.
-
 The current directory is mounted into the container so that the elm tools can locate your project files
 and write out `elm.js` and the `elm-stuff` directory. 
 
